@@ -2,11 +2,13 @@ import React from 'react';
 
 const Interns = ({interns}) => {
     const renderInterns = interns.map(intern =>
-        <span>{intern.name}</span>
+        <h3>{intern.name}</h3>
+        
         )
 
         return (
             <div>
+                <h1>Interns</h1>
                 {renderInterns}
             </div>
         )
