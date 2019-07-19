@@ -9,7 +9,7 @@ const Interns = (props) => {
                  {props.interns.map(intern => 
                     <div key={intern.id} className="intern-text" >
                         <ul>
-                        <h5 className="intern-text">{intern.name} - {intern.job}</h5>
+                      <button><h5 className="intern-text">{intern.name} - {intern.job}</h5></button>  
                         </ul>
                     </div>
                     )}
