@@ -1,21 +1,19 @@
 import React from 'react';
-
+import InternList from '/home/sammybrake/dash/intern-dashboard/src/components/InternList.js';
 
 const Interns = (props) => {
     
-    // const renderInterns = props.interns.map(intern =>
-    //     <h3 className="intern-text">{intern.name} - {intern.job}</h3>
-    //     )
-
         return (
-            <div className="intern-text">
+            <div >
                 <h1>Interns</h1>
-                    <div >
-                    <ul>
-                    {props.interns.map(intern => 
-                    <li> <h5 className="intern-text">{intern.name} - {intern.job}</h5></li>)}
-                     </ul>
+                 {props.interns.map(intern => 
+                    <div key={intern.id} className="intern-text" >
+                        <ul>
+                        <h5 className="intern-text">{intern.name} - {intern.job}</h5>
+                        </ul>
                     </div>
+                    )}
+                     
             </div>
         )
 };

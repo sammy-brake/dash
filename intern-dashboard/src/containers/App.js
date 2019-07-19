@@ -4,34 +4,7 @@ import Interns from './Interns.js';
 import Intern from './Intern.js';
 import Header from '/home/sammybrake/dash/intern-dashboard/src/components/Header.js';
 
-// let interns = [
-//     {
-//         id: 1,
-//         name: "Sammy Brake",
-//         age: 27,
-//         location_gps: null,
-//         location_address: "414 E 12th St, Kansas City, MO 64106",
-//         supervisor: "Kari Dowdell",
-//         hours_worked: 100,
-//         hours_allowed: 160,
-//         job: "Office of Innovation",
-//         created_at: "2019-07-18T14:27:31.840Z",
-//         updated_at: "2019-07-18T14:27:31.840Z"
-//         },
-//         {
-//         id: 2,
-//         name: "Anurag Patel",
-//         age: 40,
-//         location_gps: null,
-//         location_address: "414 E 12th St, Kansas City, MO 64106",
-//         supervisor: "Fatima Dowdell",
-//         hours_worked: 60,
-//         hours_allowed: 160,
-//         job: "Human Resources",
-//         created_at: "2019-07-18T14:27:31.999Z",
-//         updated_at: "2019-07-18T14:27:31.999Z"
-//         }
-//     ]
+//maybe I want to make the fetch in interns.js and pass that to a component called intern list. 
 
 class App extends Component {
 
@@ -50,7 +23,7 @@ class App extends Component {
         
     }
 
-
+// intern-list does is not stateful, might not be a container
 render() {
     console.log(this.state)
     return (
@@ -58,6 +31,7 @@ render() {
         <div className="header">
             <Header />
         </div>
+        
         <div className="intern-list">
             <Interns interns={this.state.interns}/>
         </div>

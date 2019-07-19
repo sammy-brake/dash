@@ -48,6 +48,7 @@
   float: left;
   width: 30vw;
   height: 40vw;
+  color: white;
   overflow: auto;
   }
 
@@ -57,6 +58,17 @@
 
 .intern-list:hover {
   background-image: linear-gradient(to right, red , yellow);
+
+}
+
+.intern-list:hover h1 {
+  text-shadow: 0 0 3px rgb(206, 190, 190), 0 0 5px #0000FF; 
+
+}
+
+.intern-text{
+  text-align: left;
+  color: black;
 }
 
 
@@ -78,5 +90,7 @@
   max-width: 20%;
   float: left;
 }
+
+
 
 
