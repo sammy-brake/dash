@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Interns from './Interns.js';
 import Intern from './Intern.js';
+import Header from '/home/sammybrake/dash/intern-dashboard/src/components/Header.js';
 
 let interns = [
     {
@@ -37,7 +38,7 @@ render() {
     return (
     <div className="App">
         <div className="header">
-            HireKC
+            <Header />
         </div>
         <div className="intern-list">
             <Interns interns={interns}/>

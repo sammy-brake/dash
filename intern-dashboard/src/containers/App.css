@@ -44,16 +44,18 @@
 }
 
 .intern-list {
-  background: #D3E0C9;
+  background: #29aae0;
   float: left;
   width: 30vw;
   height: 90vw;
-  font: #4A4B46;
+  
 }
 
 
+
+
 .header {
-  
+  display: flex;
   margin: 0;
   float: left;
   width: 98vw;
@@ -61,5 +63,13 @@
   border: solid;
   border-color: #380011;
   border-width: 51x;
+  font: #4A4B46
+
   
 }
+
+.header img {
+  max-width: 20%;
+  float: left;
+}
+
