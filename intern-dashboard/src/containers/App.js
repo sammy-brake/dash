@@ -34,6 +34,20 @@ let interns = [
     ]
 
 class App extends Component {
+
+//     constructor(props) {
+//         super(props)
+//         this.state = {
+//             interns: []
+//         }
+//     }
+// componentDidMount() {
+
+// }
+
+
+
+
 render() {
     return (
     <div className="App">

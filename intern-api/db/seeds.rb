@@ -8,7 +8,7 @@
 
 
 Intern.create(name: 'Sammy Brake', age: 27, location_address: "414 E 12th St, Kansas City, MO 64106", supervisor: "Kari Dowdell", hours_worked: 100, hours_allowed: 160, job: "Office of Innovation" )
-Intern.create(name: 'Anurag Patel', age: 40, location_address: "414 E 12th St, Kansas City, MO 64106", supervisor: "Fatima Dowdell", hours_worked: 60, hours_allowed: 160, job: "Human Resources" )
+Intern.create(name: 'Amber Greene', age: 40, location_address: "414 E 12th St, Kansas City, MO 64106", supervisor: "Fatima Dowdell", hours_worked: 60, hours_allowed: 160, job: "Human Resources" )
 Intern.create(name: 'Christina Nguyen', age: 20, location_address: "414 E 12th St, Kansas City, MO 64106", supervisor: "Kiona Redwood", hours_worked: 70, hours_allowed: 160, job: "Fire Department - Outreach Office" )
 Intern.create(name: 'Ronald Hernandez', age: 25, location_address: "414 E 12th St, Kansas City, MO 64106", supervisor: "Dalena Scott", hours_worked: 100, hours_allowed: 160, job: "City Council" )
 Intern.create(name: 'Nkem Mehic', age: 15, location_address: "414 E 12th St, Kansas City, MO 64106", supervisor: "Dalena Scott", hours_worked: 100, hours_allowed: 160, job: "City Council" )

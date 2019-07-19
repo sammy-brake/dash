@@ -49,9 +49,11 @@
   width: 30vw;
   height: 90vw;
   
+  }
+
+.intern-list:hover {
+  background-image: linear-gradient(to right, red , yellow);
 }
-
-
 
 
 .header {
@@ -63,13 +65,14 @@
   border: solid;
   border-color: #380011;
   border-width: 51x;
-  font: #4A4B46
-
+  color: #4A4B46;
   
 }
+
 
 .header img {
   max-width: 20%;
   float: left;
 }
+
 

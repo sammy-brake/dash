@@ -2,7 +2,7 @@ import React from 'react';
 
 const Interns = ({interns}) => {
     const renderInterns = interns.map(intern =>
-        <h3>{intern.name} - {intern.job}</h3>
+        <h3 className="intern-text">{intern.name} - {intern.job}</h3>
         
         )
 
