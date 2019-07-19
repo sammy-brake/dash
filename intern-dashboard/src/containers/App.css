@@ -47,9 +47,13 @@
   background: #29aae0;
   float: left;
   width: 30vw;
-  height: 90vw;
-  
+  height: 40vw;
+  overflow: auto;
   }
+
+  /* .intern-text {
+    height: 50%;
+  } */
 
 .intern-list:hover {
   background-image: linear-gradient(to right, red , yellow);
