@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Interns from './containers/Interns.js';
 import Intern from './containers/Intern.js';
+import Hours from './containers/Hours.js';
 import Header from '/home/sammybrake/dash/intern-dashboard/src/components/Header.js';
 
 //maybe I want to make the fetch in interns.js and pass that to a component called intern list. 
@@ -36,6 +37,7 @@ render() {
         
             <Route exact path='/' component={Interns}/>
             <Route path = '/intern' component={Intern}/>
+            <Route path='/hours' component={Hours}/>
 
         {/* <div className="intern-content">
             <Intern />
