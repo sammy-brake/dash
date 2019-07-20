@@ -1,6 +1,8 @@
+
+
 import React, { Component } from 'react';
 import InternList from '/home/sammybrake/dash/intern-dashboard/src/components/InternList.js';
-import Home from '/home/sammybrake/dash/intern-dashboard/src/components/Home.js';
+import InternCard from '/home/sammybrake/dash/intern-dashboard/src/components/InternCard.js';
 
 class Interns extends Component {
 
@@ -15,15 +17,13 @@ class Interns extends Component {
         fetch('http://localhost:3001/api/interns')
         .then(response => response.json())
         .then(interns => this.setState({interns}))
-       
-        
     }
     
         render() {
         return (
             <div>
                 <InternList interns={this.state.interns} />
-                <Home />
+                <InternCard />
             </div>
             
         )
