@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
-import Interns from './Interns.js';
-import Intern from './Intern.js';
+import Interns from './containers/Interns.js';
+import Intern from '/home/sammybrake/dash/intern-dashboard/src/components/Intern.js';
 import Header from '/home/sammybrake/dash/intern-dashboard/src/components/Header.js';
 
 //maybe I want to make the fetch in interns.js and pass that to a component called intern list. 
@@ -25,19 +26,21 @@ class App extends Component {
 
 // intern-list does is not stateful, might not be a container
 render() {
-    console.log(this.state)
+    
     return (
     <div className="App">
         <div className="header">
             <Header />
         </div>
-        
+        <Router>
         <div className="intern-list">
-            <Interns interns={this.state.interns}/>
+        
+            <Route exact path='/mom' component={Interns}/>
         </div>
         <div className="intern-content">
             <Intern />
         </div>
+        </Router>
        
     </div>
     )
