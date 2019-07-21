@@ -11,6 +11,7 @@ const HoursForm = ({interns}) => {
                    <form>
                       <label>{intern.name}: {intern.hours_worked}/{intern.hours_allowed}  </label>
                       <input type="number"/>
+                      <input type="hidden" value={intern.id} ></input>
                     </form>
                    </ul>
                  </div>
