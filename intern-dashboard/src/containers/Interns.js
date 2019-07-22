@@ -11,7 +11,7 @@ class Interns extends Component {
     }
      
         render() {
-      debugger 
+      
         return (
             <div>
             

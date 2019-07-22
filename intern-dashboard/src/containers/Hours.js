@@ -1,27 +1,20 @@
 
-
+import { connect } from 'react-redux';
+import {fetchInterns} from '../actions/fetchInterns';
 import React, { Component } from 'react';
 import HoursForm from './HoursForm';
 
 class Hours extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            interns: []
-        }
-    }
 
     componentDidMount() {
-        fetch('http://localhost:3001/api/interns')
-        .then(response => response.json())
-        .then(interns => this.setState({interns}))
+        this.props.fetchInterns();
     }
     
         render() {
         return (
             <div>
-                <HoursForm interns={this.state.interns} />
+                <HoursForm interns={this.props.interns} />
             </div>
             
         )
@@ -29,5 +22,13 @@ class Hours extends Component {
 
 };
 
+const mapStateToProps = (state) => {
+   
+    return ({
+        
+        interns: state.interns.interns
+    })
+}
 
-export default Hours
+
+export default connect(mapStateToProps, {fetchInterns})(Hours) 
