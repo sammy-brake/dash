@@ -4,7 +4,7 @@ import internsFormData from './internsFormData';
 
 const rootReducer = combineReducers({
   interns: internsReducer,
-  form: internsFormData
+  internsFormData
   
 })
 

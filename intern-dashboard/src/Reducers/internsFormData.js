@@ -4,9 +4,10 @@ const initialState = {
   }
   
   export default (state = initialState, action) => {
-    switch(action.type) {
+    switch(action.type)  {
       case 'UPDATE_HOURS':
-        return action.internFormData
+      debugger
+        return state = action.payload
   
       case 'RESET_HOURS_FORM':
         return initialState;

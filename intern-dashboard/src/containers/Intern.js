@@ -13,13 +13,16 @@ class Intern extends Component {
         // this.props.fetchIntern(this.props.match.params.internId);
     }
 
+    
+
 
         render() { 
-           
+             
+            
         return (
             <div>
                 <InternList interns={this.props.interns}  />
-                <InternCard interns={this.props.interns} id={this.props.match.params.internId} />
+                <InternCard interns={this.props.interns}  intern={this.props.interns[this.props.match.params.internId-1]} id={this.props.match.params.internId}/>
             </div>
             
         )

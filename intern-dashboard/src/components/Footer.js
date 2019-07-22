@@ -1,0 +1,1 @@
+// make sure this is a functional component not a class component 
