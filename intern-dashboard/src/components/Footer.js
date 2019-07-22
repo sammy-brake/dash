@@ -2,10 +2,10 @@
 import React from 'react';
 
 const Footer = () => (
-    <div>
-        <a href="/">Home</a>
-        
-       
+    <div className="footerLink">
+       <a href="/" >Home</a>
+       <a href='https://hirekc.org/'>About</a>
+       <a href='https://www.kcmo.gov/'>City Offices</a>
     </div>
 );
 

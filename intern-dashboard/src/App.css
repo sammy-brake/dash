@@ -3,7 +3,6 @@
 }
 
 .intern-content {
-  background: #FDFAFD;
   margin: 0;
   float: left;
   width: 68vw;
@@ -73,6 +72,7 @@
 .header img {
   max-width: 20%;
   float: left;
+  margin-left: 5px;
 }
 
 button {
@@ -86,8 +86,25 @@ button {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: red;
-  color: white;
-  text-align: center;
+  background-color:white;
+  font: white;
+  text-align: left;
 }
+
+.footerLink a:link, a:visited {
+  background-color: white;
+  border: solid;
+  border-color: #29aae0;
+  color: blue;
+  padding: 14px 25px;
+  /* text-align: l;  */
+  text-decoration: none;
+  display: inline-block;
+}
+
+.footerLink a:hover {
+  background-color: silver;
+}
+
+
 
