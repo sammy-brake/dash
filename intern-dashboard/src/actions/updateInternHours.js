@@ -3,7 +3,8 @@
 // const updateHours = internFormData  = {
 //     return {
 //         type: "UPDATE_HOURS",
-//         internFormData
+//         payload: internsFormData
 
 //     }
 // }
+

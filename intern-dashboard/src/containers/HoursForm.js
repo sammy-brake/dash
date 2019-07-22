@@ -1,39 +1,33 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {updateInternHours} from '../actions/updateInternHours'
-
-
 class HoursForm extends Component {
 
     state = {
         hours: null,
-        id: null
+        internId: null
     }
 
     handleChange = event => {
         this.setState({
             hours: event.target.value,
-            id: event.target.id
+            internId: event.target.id
         });
-        console.log(event.target.value, event.target.id)
-        // const currentInternFormData = Object.assign({}, this.props.internsFormData, {
-        //     hours: event.target.value,
-        //     internId: id
-        // })
-        // this.props.updateHours(currentInternFormData)
-
         }
 
         handleSubmit = event => {
             event.preventDefault();
-            console.log(this)
             this.props.updateHours(this.state);
+            debugger 
+            this.setState({
+                hours: null,
+                internId: null
+              });
+             
     };
 
     render() {
        
-        const { hours, internId }  = this.props.internsFormData
     return (
         <div className="hours">
             <h1>Update Hours</h1>

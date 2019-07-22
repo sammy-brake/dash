@@ -7,16 +7,14 @@ import Interns from './containers/Interns.js';
 import Intern from './containers/Intern.js';
 import Hours from './containers/Hours.js';
 import Header from '/home/sammybrake/dash/intern-dashboard/src/components/Header.js';
+import Footer from '/home/sammybrake/dash/intern-dashboard/src/components/Footer.js';
 
-//maybe I want to make the fetch in interns.js and pass that to a component called intern list. 
+
 
 class App extends Component {
-
-    // componentDidMount() {
-    //     this.props.fetchInterns();
-    // }
-
+    
 render() {
+     
     
     return (
     <div className="App">
@@ -28,6 +26,9 @@ render() {
             <Route path = '/interns/:internId' component={Intern}/>
             <Route path='/hours' component={Hours}/>
         </Router>
+        <div className="footer">
+            <Footer />
+        </div>
        
     </div>
     )

@@ -14,7 +14,6 @@ class Interns extends Component {
       
         return (
             <div>
-            
                 <InternList interns={this.props.interns} />
                 <Home />
             </div>

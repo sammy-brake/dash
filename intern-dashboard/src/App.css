@@ -2,48 +2,28 @@
   text-align: center;
 }
 
-/* .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-} */
-
-/* .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
-
-/* .App-link {
-  color: #61dafb;
-} */
-
-/* @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
-
 .intern-content {
   background: #FDFAFD;
   margin: 0;
   float: left;
   width: 68vw;
-  height: 90vw;
   font: #4A4B46;
+} 
 
+.intern-card {
+  margin: 0;
+  position: fixed;
+  margin-left: 550px;
+  margin-top: 75px;
+  
 }
 
+
+/* below is different */
+
+
 .intern-list {
+  
   background: #29aae0;
   float: left;
   width: 30vw;
@@ -60,25 +40,20 @@
 
 .intern-list:hover h1 {
   text-shadow: 0 0 3px rgb(206, 190, 190), 0 0 5px #0000FF; 
-
-}
+} 
 
 .intern-list:hover button {
   background: white;
   width: 80%;
   
 }
-
-
-
 .intern-text{
   text-align: left;
   color: black;
   font-size: 12px;
   margin-bottom: 2px;
   margin-top: 2px;
-}
-
+} 
 
 
 .header {
@@ -103,10 +78,16 @@
 button {
   background:  #29aae0;
   border: none;
-  
 }
 
 
-
-
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
 
