@@ -1,6 +1,6 @@
 
 
-const internsReducer = (state = {interns: [], intern: []}, action) => {
+const internsReducer = (state = {interns: []}, action) => {
     switch(action.type) {
         case 'FETCH_INTERNS':
         return {interns: action.payload}

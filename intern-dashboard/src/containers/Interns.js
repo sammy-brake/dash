@@ -24,7 +24,6 @@ class Interns extends Component {
 };
 
 const mapStateToProps = (state) => {
-   
     return ({
         interns: state.interns.interns
     })

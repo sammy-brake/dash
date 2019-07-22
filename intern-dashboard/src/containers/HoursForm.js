@@ -4,14 +4,18 @@ import { connect } from 'react-redux';
 class HoursForm extends Component {
 
     state = {
+        interns: [],
         hours: null,
         internId: null
+        
     }
 
     handleChange = event => {
+       
         this.setState({
             hours: event.target.value,
-            internId: event.target.id
+            internId: event.target.id,
+            interns: this.props.interns
         });
         }
 
@@ -21,7 +25,8 @@ class HoursForm extends Component {
             debugger 
             this.setState({
                 hours: null,
-                internId: null
+                internId: null,
+                interns: []
               });
              
     };
@@ -51,15 +56,18 @@ class HoursForm extends Component {
 
  //write this action in my actions folder and import
 
+
   const mapDispatchToProps = dispatch => {
     return {
+       
         updateHours: internsFormData => dispatch({ type: 'UPDATE_HOURS', payload: internsFormData })
     };
 };
 
 const mapStateToProps = state => {
     return {
-        internsFormData: state.internsFormData
+        interns: state.interns.interns,
+        // internsFormData: state.internsFormData
 
     }
 }
