@@ -6,11 +6,9 @@ import HoursForm from './HoursForm';
 
 class Hours extends Component {
 
-
     componentDidMount() {
         this.props.fetchInterns();
     }
-    
         render() {
         return (
             <div>
@@ -19,13 +17,10 @@ class Hours extends Component {
             
         )
 };
-
 };
 
 const mapStateToProps = (state) => {
-   
     return ({
-        
         interns: state.interns.interns
     })
 }

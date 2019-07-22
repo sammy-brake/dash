@@ -2,10 +2,7 @@
 import React from 'react';
 
 const InternList = (props) => {
-    
-     
     return (
-       
         <div className="intern-list">
             <h1>Interns</h1>
                 {props.interns.map(intern => 

@@ -12,14 +12,20 @@
 .intern-card {
   margin: 0;
   position: fixed;
-  margin-left: 550px;
+  margin-left: 400px;
   margin-top: 75px;
+  text-align: center;
+  border: solid;
+  padding-right: 150px;
+  padding-left: 150px;
   
 }
 
-
-/* below is different */
-
+.intern-card h1 {
+  border: solid;
+  border-color: #29aae0;
+  
+}
 
 .intern-list {
   

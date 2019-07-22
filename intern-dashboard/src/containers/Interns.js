@@ -11,7 +11,6 @@ class Interns extends Component {
     }
      
         render() {
-      
         return (
             <div>
                 <InternList interns={this.props.interns} />
@@ -27,10 +26,8 @@ class Interns extends Component {
 const mapStateToProps = (state) => {
    
     return ({
-        
         interns: state.interns.interns
     })
 }
-
 
 export default connect(mapStateToProps, {fetchInterns})(Interns) 
