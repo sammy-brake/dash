@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-// import {fetchInterns} from './actions/fetchInterns'
 import { BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
 import Interns from './containers/Interns.js';
@@ -36,17 +34,5 @@ render() {
 
 
 }
-
-// const mapStateToProps = (state) => {
-    
-//     return ({
-        
-//         interns: state.interns.interns
-        
-//     })
-// }
-
-
-// export default connect(mapStateToProps, {fetchInterns})(App) 
 export default App
 
