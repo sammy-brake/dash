@@ -1,35 +1,37 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import {fetchInterns} from '../actions/fetchInterns'
 import InternList from '/home/sammybrake/dash/intern-dashboard/src/components/InternList.js';
 import Home from '/home/sammybrake/dash/intern-dashboard/src/components/Home.js';
 
 class Interns extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            interns: []
-        }
-    }
-
     componentDidMount() {
-        fetch('http://localhost:3001/api/interns')
-        .then(response => response.json())
-        .then(interns => this.setState({interns}))
-       
-        
+        this.props.fetchInterns();
     }
-    
+     
         render() {
+      debugger 
         return (
             <div>
-                <InternList interns={this.state.interns} />
+            
+                <InternList interns={this.props.interns} />
                 <Home />
             </div>
             
         )
+       
 };
 
 };
 
+const mapStateToProps = (state) => {
+   
+    return ({
+        
+        interns: state.interns.interns
+    })
+}
 
-export default Interns 
+
+export default connect(mapStateToProps, {fetchInterns})(Interns) 

@@ -1,7 +1,7 @@
 
 
 import React, { Component } from 'react';
-import HoursForm from '/home/sammybrake/dash/intern-dashboard/src/components/HoursForm.js';
+import HoursForm from './HoursForm';
 
 class Hours extends Component {
 
