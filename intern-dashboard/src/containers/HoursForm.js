@@ -1,11 +1,13 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import {editIntern} from '../actions/editIntern'
+
 
 class HoursForm extends Component {
 
     state = {
-        interns: [],
+        // interns: [],
         hours: null,
         internId: null
         
@@ -16,13 +18,13 @@ class HoursForm extends Component {
         this.setState({
             hours: event.target.value,
             internId: event.target.id,
-            interns: this.props.interns
+            // interns: this.props.interns
         });
         }
 
         handleSubmit = event => {
             event.preventDefault();
-            this.props.updateHours(this.state);
+            this.props.editIntern(this.state);
             this.setState({
                 hours: null,
                 internId: null,
@@ -58,12 +60,12 @@ class HoursForm extends Component {
  //write this action creator in my actions folder and import
 
 
-  const mapDispatchToProps = dispatch => {
-    return {
+//   const mapDispatchToProps = dispatch => {
+//     return {
        
-        updateHours: internFormData => dispatch({ type: 'UPDATE_HOURS', payload: internFormData })
-    };
-};
+//         updateHours: internFormData => dispatch({ type: 'UPDATE_HOURS', payload: internFormData })
+//     };
+// };
 
 const mapStateToProps = state => {
     // debugger 
@@ -75,4 +77,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(HoursForm);
+export default connect(mapStateToProps, {editIntern})(HoursForm);
