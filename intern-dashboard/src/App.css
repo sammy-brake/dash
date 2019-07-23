@@ -23,7 +23,8 @@
 
 .intern-card h1 {
   border: solid;
-  border-color: #29aae0;
+  /* border-color: #29aae0; */
+  background-image: linear-gradient(to right, red , yellow);
   
 }
 
@@ -50,6 +51,9 @@
 .intern-list:hover button {
   background: white;
   width: 80%;
+  box-shadow: 7px 7px 9px -5px rgba(0,0,0,0.87);
+
+
   
 }
 .intern-text{
@@ -111,6 +115,3 @@ button {
 .footerLink a:hover {
   background-color: silver;
 }
-
-
-

@@ -3,7 +3,7 @@ import React from 'react';
 
 const InternList = (props) => {
     return (
-        <div className="intern-list">
+        <div className="intern-list" classID="scrollbar-custom">
             <h1>Interns</h1>
                 {props.interns.map(intern => 
                   <div key={intern.id} className="intern-text" >
