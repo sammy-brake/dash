@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+
 class HoursForm extends Component {
 
     state = {
@@ -22,12 +23,12 @@ class HoursForm extends Component {
         handleSubmit = event => {
             event.preventDefault();
             this.props.updateHours(this.state);
-            debugger 
             this.setState({
                 hours: null,
                 internId: null,
                 interns: []
               });
+              
              
     };
 
@@ -54,20 +55,22 @@ class HoursForm extends Component {
  };
 
 
- //write this action in my actions folder and import
+ //write this action creator in my actions folder and import
 
 
   const mapDispatchToProps = dispatch => {
     return {
        
-        updateHours: internsFormData => dispatch({ type: 'UPDATE_HOURS', payload: internsFormData })
+        updateHours: internFormData => dispatch({ type: 'UPDATE_HOURS', payload: internFormData })
     };
 };
 
 const mapStateToProps = state => {
+    // debugger 
     return {
         interns: state.interns.interns,
-        // internsFormData: state.internsFormData
+        internHours: state.internsFormData.hours, 
+        internId: state.internsFormData.internId
 
     }
 }
