@@ -1,3 +1,5 @@
+require 'pry'
+
 class Api::InternsController < ApplicationController
     def index
         render json: Intern.all 
@@ -18,6 +20,7 @@ class Api::InternsController < ApplicationController
     end 
 
     def update 
+        binding.pry 
         @intern = Intern.find_by(id: params[:id])
         if @intern.update(intern_params)
             render json: @intern 

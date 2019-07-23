@@ -3,7 +3,7 @@ export function editIntern(internData) {
     debugger
     return (dispatch) => {
         return fetch(`http://localhost:3001/api/interns/${internData.internId}`, {
-            method: 'POST', 
+            method: 'PATCH', 
             headers: {
                 'content-type': 'application/json'
             },
