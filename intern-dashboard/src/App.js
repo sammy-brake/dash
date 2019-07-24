@@ -6,11 +6,12 @@ import Intern from './containers/Intern.js';
 import Hours from './containers/Hours.js';
 import Header from '/home/sammybrake/dash/intern-dashboard/src/components/Header.js';
 import Footer from '/home/sammybrake/dash/intern-dashboard/src/components/Footer.js';
+import { connect } from 'react-redux';
+import {fetchInterns} from './actions/fetchInterns'
 
 
 
 class App extends Component {
-    
 render() {
      
     
@@ -34,5 +35,13 @@ render() {
 
 
 }
-export default App
+
+const mapStateToProps = (state) => {
+    return ({
+        interns: state.interns.interns
+    })
+}
+
+export default connect(mapStateToProps, {fetchInterns})(App) 
+// export default App
 

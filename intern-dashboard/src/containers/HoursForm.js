@@ -21,14 +21,14 @@ class HoursForm extends Component {
         }
 
         handleSubmit = event => {
-           
+           event.preventDefault();
             this.props.editIntern(this.state);
             this.setState({
                 hours: null,
                 internId: null,
                 interns: this.props.interns
         });  
-        // event.preventDefault();
+        
     };
 
     render() {
@@ -53,16 +53,12 @@ class HoursForm extends Component {
  };
  };
 
+ 
 
- //write this action creator in my actions folder and import
+HoursForm.defaultProps = {
 
-
-//   const mapDispatchToProps = dispatch => {
-//     return {
-       
-//         updateHours: internFormData => dispatch({ type: 'UPDATE_HOURS', payload: internFormData })
-//     };
-// };
+    interns: []
+}
 
 const mapStateToProps = state => {
  

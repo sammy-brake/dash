@@ -22,8 +22,10 @@ class Api::InternsController < ApplicationController
     def update 
         @intern = Intern.find_by(id: params[:internId])
         @intern.hours_worked = params[:hours]
+        
         if @intern.save
-            render json: @intern
+            @interns = Intern.all
+            render json: @interns
         else 
             render json: {message: intern.errors}, status: 400
         end 

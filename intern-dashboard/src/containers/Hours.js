@@ -10,6 +10,7 @@ class Hours extends Component {
         this.props.fetchInterns();
     }
         render() {
+            debugger
         return (
             <div>
                 <HoursForm interns={this.props.interns} />
@@ -20,6 +21,7 @@ class Hours extends Component {
 };
 
 const mapStateToProps = (state) => {
+    
     return ({
         interns: state.interns.interns
     })

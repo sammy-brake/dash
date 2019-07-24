@@ -1,4 +1,3 @@
-// make sure this is a functional component not a class component 
 import React from 'react';
 
 const Footer = () => (

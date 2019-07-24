@@ -11,7 +11,6 @@ export function editIntern(internData) {
         })
         .then(res => res.json())
         .then(data => {
-            debugger 
         dispatch({ type: 'EDIT_INTERNS', payload: data })} )
 
     }
