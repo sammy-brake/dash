@@ -6,26 +6,23 @@ import HoursForm from './HoursForm';
 
 class Hours extends Component {
 
-    componentDidMount() {
-        this.props.fetchInterns();
-    }
         render() {
-            debugger
         return (
             <div>
-                <HoursForm interns={this.props.interns} />
+                <HoursForm  />
             </div>
             
         )
 };
 };
 
-const mapStateToProps = (state) => {
-    
-    return ({
-        interns: state.interns.interns
-    })
-}
+// const mapStateToProps = (state) => {
+//     return ({
+//         interns: state.interns.interns
+//     })
+// }
 
 
-export default connect(mapStateToProps, {fetchInterns})(Hours) 
+// export default connect(mapStateToProps, {fetchInterns})(Hours) 
+export default Hours
+

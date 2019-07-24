@@ -18,9 +18,7 @@ class Interns extends Component {
             </div>
             
         )
-       
 };
-
 };
 
 const mapStateToProps = (state) => {

@@ -4,17 +4,18 @@ import './App.css';
 import Interns from './containers/Interns.js';
 import Intern from './containers/Intern.js';
 import Hours from './containers/Hours.js';
-import Header from '/home/sammybrake/dash/intern-dashboard/src/components/Header.js';
-import Footer from '/home/sammybrake/dash/intern-dashboard/src/components/Footer.js';
+import Header from './components/Header.js';
+import Footer from './components/Footer.js';
 import { connect } from 'react-redux';
 import {fetchInterns} from './actions/fetchInterns'
 
-
-
 class App extends Component {
-render() {
-     
+
+    componentDidMount() {
+        this.props.fetchInterns();
+    }
     
+render() {
     return (
     <div className="App">
         <div className="header">
@@ -23,7 +24,7 @@ render() {
         <Router>
             <Route exact path='/' component={Interns }/>
             <Route path = '/interns/:internId' component={Intern}/>
-            <Route path='/hours' component={Hours}/>
+            <Route path='/hours' component={Hours} interns={this.props.interns}/>
         </Router>
         <div className="footer">
             <Footer />
@@ -32,9 +33,7 @@ render() {
     </div>
     )
 }
-
-
-}
+} 
 
 const mapStateToProps = (state) => {
     return ({
@@ -43,5 +42,4 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps, {fetchInterns})(App) 
-// export default App
 

@@ -10,7 +10,6 @@ class Intern extends Component {
     componentDidMount() {
         this.props.fetchInterns();
     }
-
         render() { 
         return (
             <div>
