@@ -14,8 +14,13 @@ class Intern extends Component {
         render() { 
         return (
             <div>
+                {this.props.interns ?
+                <div>
                 <InternList interns={this.props.interns}  />
                 <InternCard intern={this.props.interns[this.props.match.params.internId-1]}/>
+                </div>
+                :
+                null}
             </div>
             
         )

@@ -7,41 +7,38 @@ import {editIntern} from '../actions/editIntern'
 class HoursForm extends Component {
 
     state = {
-        // interns: [],
+        interns: this.props.interns,
         hours: null,
         internId: null
-        
     }
 
     handleChange = event => {
-       
         this.setState({
             hours: event.target.value,
             internId: event.target.id,
-            // interns: this.props.interns
+            interns: this.props.interns
         });
         }
 
         handleSubmit = event => {
-            event.preventDefault();
+           
             this.props.editIntern(this.state);
             this.setState({
                 hours: null,
                 internId: null,
-                interns: []
-              });
-              
-             
+                interns: this.props.interns
+        });  
+        // event.preventDefault();
     };
 
     render() {
-       
+      
     return (
         <div className="hours">
             <h1>Update Hours</h1>
                 {this.props.interns.map(intern => 
                   <div key={intern.id} className="intern-text" >
-                      <ul>
+                    <ul>
                    <form onSubmit={ event => this.handleSubmit(event) }>
                      <label htmlFor="name">{intern.name}: {intern.hours_worked}/{intern.hours_allowed}  </label>
                       <input type="number" name="hours" id={intern.id}  onChange={this.handleChange}/> 
@@ -68,7 +65,7 @@ class HoursForm extends Component {
 // };
 
 const mapStateToProps = state => {
-    // debugger 
+ 
     return {
         interns: state.interns.interns,
         internHours: state.internsFormData.hours, 
