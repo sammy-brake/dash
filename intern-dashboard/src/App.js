@@ -23,8 +23,9 @@ render() {
             <Header />
         </div>
         <Router>
+            
             <Route exact path='/' component={Interns }/>
-            <Route path = '/interns/:internId' component={Intern}/>
+            <Route exact path = '/interns/:internId' component={Intern} interns={this.props.interns}/>
             <Route path='/hours' component={HoursForm} interns={this.props.interns}/>
             <Route path='/about' component={About}/>
         </Router>

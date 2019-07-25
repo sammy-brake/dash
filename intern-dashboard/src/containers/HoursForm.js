@@ -8,7 +8,7 @@ class HoursForm extends Component {
 
     state = {
         hours: null,
-        internId: null
+        internId: null,
     }
 
     handleChange = event => {
@@ -20,16 +20,12 @@ class HoursForm extends Component {
         }
 
         handleSubmit = event => {
-            debugger 
            event.preventDefault();
-           event.persist();
             this.props.editIntern(this.state);
             this.setState({
                 hours: null,
                 internId: null,
-                interns: this.props.interns,
         });  
-        
     };
 
     render() {
@@ -57,7 +53,6 @@ class HoursForm extends Component {
  
 
 HoursForm.defaultProps = {
-
     interns: []
 }
 
