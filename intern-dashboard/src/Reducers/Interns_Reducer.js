@@ -6,7 +6,7 @@ const internsReducer = (state = {interns: []}, action) => {
         return {interns: action.payload}
 
         case 'EDIT_INTERNS':
-
+        debugger 
         return {interns: action.payload}
 
         default:

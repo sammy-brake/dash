@@ -3,8 +3,9 @@ import { BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
 import Interns from './containers/Interns.js';
 import Intern from './containers/Intern.js';
-import Hours from './containers/Hours.js';
+import HoursForm from './containers/HoursForm.js';
 import Header from './components/Header.js';
+import About from './components/About.js';
 import Footer from './components/Footer.js';
 import { connect } from 'react-redux';
 import {fetchInterns} from './actions/fetchInterns'
@@ -22,9 +23,11 @@ render() {
             <Header />
         </div>
         <Router>
+            
             <Route exact path='/' component={Interns }/>
-            <Route path = '/interns/:internId' component={Intern}/>
-            <Route path='/hours' component={Hours} interns={this.props.interns}/>
+            <Route exact path = '/interns/:internId' component={Intern} interns={this.props.interns}/>
+            <Route path='/hours' component={HoursForm} interns={this.props.interns}/>
+            <Route path='/about' component={About}/>
         </Router>
         <div className="footer">
             <Footer />

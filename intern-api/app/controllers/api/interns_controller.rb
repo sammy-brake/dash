@@ -20,9 +20,9 @@ class Api::InternsController < ApplicationController
     end 
 
     def update 
-        @intern = Intern.find_by(id: params[:internId])
+        actualId = params[:internId].to_i + 1
+        @intern = Intern.find_by(id: actualId)
         @intern.hours_worked = params[:hours]
-        
         if @intern.save
             @interns = Intern.all
             render json: @interns

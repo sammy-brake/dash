@@ -2,7 +2,7 @@
 export function editIntern(internData) {
    
     return (dispatch) => {
-        return fetch(`http://localhost:3001/api/interns/${internData.internId}`, {
+        return fetch(`http://localhost:3001/api/interns/${internData.internId+1}`, {
             method: 'PATCH', 
             headers: {
                 'content-type': 'application/json'
@@ -11,7 +11,7 @@ export function editIntern(internData) {
         })
         .then(res => res.json())
         .then(data => {
+            debugger 
         dispatch({ type: 'EDIT_INTERNS', payload: data })} )
-
     }
 }

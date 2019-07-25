@@ -7,32 +7,25 @@ import {editIntern} from '../actions/editIntern'
 class HoursForm extends Component {
 
     state = {
-        // interns: this.props.interns,
         hours: null,
         internId: null,
-        visibility: "visible"
     }
 
     handleChange = event => {
         this.setState({
             hours: event.target.value,
             internId: event.target.id,
-            // interns: this.props.interns
+
         });
         }
 
         handleSubmit = event => {
-            debugger
-            
            event.preventDefault();
             this.props.editIntern(this.state);
             this.setState({
                 hours: null,
                 internId: null,
-                interns: this.props.interns,
-                visibility: "hidden"
         });  
-        
     };
 
     render() {
@@ -47,7 +40,7 @@ class HoursForm extends Component {
                      <label htmlFor="name">{intern.name}: {intern.hours_worked}/{intern.hours_allowed}  </label>
                       <input type="number" name="hours" id={intern.id}  onChange={this.handleChange}/> 
                       <input type="hidden" value={intern.id} name="internId" ></input>
-                      <input style={{visibility:this.state.visibility}} type="submit" />
+                      <input type="submit" />
                     </form> 
                     </ul>
                  </div>
@@ -60,7 +53,6 @@ class HoursForm extends Component {
  
 
 HoursForm.defaultProps = {
-
     interns: []
 }
 
