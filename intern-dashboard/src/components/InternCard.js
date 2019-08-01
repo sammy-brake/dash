@@ -10,8 +10,6 @@ const InternCard = (props) => {
                 <h3>Onsite Supervisor: {props.intern ? props.intern.supervisor : null}</h3>
                 <p>Age: {props.intern ? props.intern.age : null}</p>
                 <p>Hours: {props.intern ? props.intern.hours_worked : null}/{props.intern ? props.intern.hours_allowed : null}</p>
-                {/* <a href="/hours">Update Intern Hours</a> */}
-                
         </div>
     )
 }

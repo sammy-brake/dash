@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
 import Interns from './containers/Interns.js';
 import Intern from './containers/Intern.js';
-import HoursForm from './containers/HoursForm.js';
 import Header from './components/Header.js';
 import About from './components/About.js';
 import Footer from './components/Footer.js';
@@ -26,12 +25,8 @@ render() {
             <Route path='/' component={Footer}/>
             <Route exact path='/' component={Interns }/>
             <Route exact path = '/interns/:internId' component={Intern} interns={this.props.interns}/>
-            <Route path='/hours' component={HoursForm} interns={this.props.interns}/>
             <Route path='/about' component={About}/>
         </Router>
-        {/* <div className="footer">
-            <Footer />
-        </div> */}
     </div>
     )
 }

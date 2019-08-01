@@ -56,11 +56,10 @@ class Intern extends Component {
 
 const mapStateToProps = (state) => {
     return ({
-        
         interns: state.interns.interns
     })
 }
  
-// export default connect(mapStateToProps, {fetchInterns})(Intern)
+
 export default connect(mapStateToProps, {fetchInterns, editIntern})(Intern)
 
