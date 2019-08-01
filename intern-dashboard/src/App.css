@@ -115,7 +115,7 @@ button {
   text-align: left;
 }
 
-.footerLink a:link, a:visited {
+.footer a:link, a:visited {
   background-color: white;
   border: solid;
   border-color: #29aae0;

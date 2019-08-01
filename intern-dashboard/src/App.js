@@ -23,16 +23,15 @@ render() {
             <Header />
         </div>
         <Router>
-            
+            <Route path='/' component={Footer}/>
             <Route exact path='/' component={Interns }/>
             <Route exact path = '/interns/:internId' component={Intern} interns={this.props.interns}/>
             <Route path='/hours' component={HoursForm} interns={this.props.interns}/>
             <Route path='/about' component={About}/>
         </Router>
-        <div className="footer">
+        {/* <div className="footer">
             <Footer />
-        </div>
-       
+        </div> */}
     </div>
     )
 }

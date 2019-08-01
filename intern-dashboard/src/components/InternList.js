@@ -1,5 +1,6 @@
 
 import React from 'react';
+import {Link} from 'react-router-dom'
 
 const InternList = (props) => {
     return (
@@ -8,7 +9,7 @@ const InternList = (props) => {
                 {props.interns ? props.interns.map(intern => 
                   <div key={intern.id} className="intern-text" >
                       <ul>
-                   <a href={`http://localhost:3000/interns/${intern.id}`}><button><h5 className="intern-text">{intern.name} - {intern.job}</h5></button></a>  
+                          <Link to={`/interns/${intern.id}`}><button><h5 className="intern-text">{intern.name} - {intern.job}</h5></button></Link>
                    </ul>
                    
                  </div>
